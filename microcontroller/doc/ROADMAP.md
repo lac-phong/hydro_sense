@@ -32,7 +32,7 @@ Our `Learn Git & Python` task would be marked completed by finishing this.
 | Name     | Status     | Date       |
 | -------- | ---------- | ---------- |
 | James    | CHECKED-IN | 2023-10-10 |
-| Drew     |            | 2023-10-10 |
+| Drew     | CHECKED-IN | 2023-10-10 |
 | Michelle |            | 2023-10-10 |
 
 ### Step-by-step Guide (Updated for branch making)
