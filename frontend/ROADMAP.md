@@ -1,4 +1,4 @@
-# Frontend Team Roadmap
+2`# Frontend Team Roadmap
 
 ## Overview
 
@@ -73,7 +73,7 @@ Our `Learn Git & React` task would be marked completed by finishing this.
 | Name    | Status     | Date       |
 | ------- | ---------- | ---------- |
 | David   | CHECKED-IN | 2023-10-11 |
-| Alan    |            | 2023-10-?? |
+| Alan    | CHECKED-IN | 2023-10-11 |
 | Krishiv |            | 2023-10-?? |
 
 ### Step-by-step Guide (Updated for branch making)
