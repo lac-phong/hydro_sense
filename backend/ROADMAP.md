@@ -29,6 +29,8 @@ TBA
 
 ## Git Workflow Summary
 
+### General use
+
 1. Start on the main branch (use `git branch` to check). 
 2. Fetch the latest changes from remote repository (`git fetch origin`). This fetches all updates from remote repository onto your local repository.
 3. Pull all updates from remote repository into your local repository (`git pull`). This updates your main branch on your local repository.
@@ -42,9 +44,17 @@ TBA
 11. Address any review comments made by team members
 12. MERGE!
 
+### First time cloning
+
+1. Git clone repository onto local host (`git clone https://github.com/lac-phong/hydro_sense.git`)
+2. Go into hydro_sense folder through terminal (`cd hydro_sense`)
+3. Run the command `npm install` to install all dependencies needed to run react
+4. Run `npm start` to boot up our react application
+5. Continue from step 6 in **General use** section
+
 ## Check-in
 
-As for our first task (Github Exercise), let's put CHEKCED-IN in our corresponding names to ensure that everyone is familiar with Git. Please start by making your own branch then push the code there and make a pull request to merge with this forked main. <br>
+As for our first task (Github Exercise), let's put CHECKED-IN in our corresponding names to ensure that everyone is familiar with Git. Please start by making your own branch then push the code there and make a pull request to merge with this forked main. <br>
 Our `Learn Git & React` task would be marked completed by finishing this.
 
 | Name     | Status     | Date       |
