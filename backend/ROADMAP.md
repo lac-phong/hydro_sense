@@ -60,7 +60,7 @@ Our `Learn Git & React` task would be marked completed by finishing this.
 | Name     | Status     | Date       |
 | -------- | ---------- | ---------- |
 | Lac      | CHECKED-IN | 2023-10-11 |
-| Stefan   | CHECKED-IN | 2023-10-11 |
+| Stefan   | CHECKED-OU | 2023-10-11 |
 | Akshitaa |            | 2023-10-?? |
 | Julia    |            | 2023-10-?? |
 
