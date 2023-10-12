@@ -74,7 +74,7 @@ Our `Learn Git & React` task would be marked completed by finishing this.
 | ------- | ---------- | ---------- |
 | David   | CHECKED-IN | 2023-10-11 |
 | Alan    |            | 2023-10-?? |
-| Krishiv |            | 2023-10-?? |
+| Krishiv | CHECKED-IN | 2023-10-11 |
 
 ### Step-by-step Guide (Updated for branch making)
 
