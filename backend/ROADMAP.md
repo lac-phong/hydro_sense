@@ -35,7 +35,7 @@ TBA
 2. Fetch the latest changes from remote repository (`git fetch origin`). This fetches all updates from remote repository onto your local repository.
 3. Pull all updates from remote repository into your local repository (`git pull`). This updates your main branch on your local repository.
 4. Create or move into your own branch (to create: `git checkout -b <branch-name>`> | to move: `git checkout <branch-name>`)
-5. Merge main branch into your own branch (`git merge origin/main`). This combines the changes from the main branch with the changes on your own branch.
+5. ***ONLY DO THIS IF YOUR BRANCH IS BEHIND FROM MAIN*** Merge main branch into your own branch (`git merge origin/main`). This combines the changes from the main branch with the changes on your own branch.
 6. Make the changes you want to the code.
 7. Stage (use `git add .` to add entire directory or `git add <file directory>` to add specific files only)
 8. Commit (`git commit -m "commit message"`)
