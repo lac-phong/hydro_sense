@@ -9,23 +9,27 @@ This document overviews the roadmap of the backend team for HydroSense referring
 | Task                                                | Start Date | Due Date   | Status      |
 | --------------------------------------------------- | ---------- | ---------- | ----------- |
 | Learn Git & React                                   | 2023-10-05 | 2023-10-11 | In Progress |
-| Setup Firebase with React app                       | 2023-10-05 | 2023-10-11 | In Progress |
-| Setup user authentication                           | 2023-10-11 | 2023-10-15 | In Progress |
-| Create and save spreadsheets for users              | 2023-10-11 | 2023-10-25 |             |
-| Read and write data from device to Firebase         | TBD        | 2023-10-21 |             |
+| Setup Firebase with React app                       | 2023-10-05 | 2023-10-11 |  COMPLETED  |
+| Setup user authentication                           | 2023-10-11 | 2023-10-18 | In Progress |
+| Connect to user's Google Drive                      | 2023-10-11 | 2023-10-25 | In Progress |
+| Create and select spreadsheets from Drive           | 2023-10-11 | 2023-10-31 | In Progress |
+| Read and write data from device to Firebase         | TBD        | 2023-10-25 |             |
 | Read and write data from Firebase onto spreadsheets | TBD        | 2023-10-31 |             |
 
 ## Task Description
 
-- Setup Firebase with React app
-- Setup user authentication
-- Create and save spreadsheets for users 
-- Read and write data from device to Firebase 
-- Read and write data from Firebase onto spreadsheets
+- Learn Git & React: Watch videos and follow task/practice under Roadmap to get comfortable with Git and React
+- Setup Firebase with React app: Setup basic Firebase config with our React app
+- Setup user authentication: Implement user login and signup system
+- Connect to user's Google Drive: Use Google Drive API for operations in regards to creating spreadsheets and selecting files from personal drive
+- Create and select spreadsheets from Drive: Implement a way for user to create and select spreadsheets to operate on from their own personal drive
+- Read and write data from device to Firebase: Work with Microcontroller team to setup communication between the Raspberry pi and Firebase
+- Read and write data from Firebase onto spreadsheets: Use Google Sheets API to write data from Firebase onto selected spreadsheet
 
 ## Task Delegation
 
-TBA
+Akshitaa and Julia: Learn Git & React, Setup user authentication, Read and write data from device to Firebase
+Stefan and Lac: Learn Git & React, Connect to user's Google Drive, Create and select spreadsheets from Drive, Read and write data from Firebase onto spreadsheets
 
 ## Git Workflow Summary
 
