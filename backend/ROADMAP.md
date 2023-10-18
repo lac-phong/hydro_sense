@@ -65,8 +65,8 @@ Our `Learn Git & React` task would be marked completed by finishing this.
 | -------- | ---------- | ---------- |
 | Lac      | CHECKED-IN | 2023-10-11 |
 | Stefan   | CHECKED-OU | 2023-10-11 |
-| Akshitaa |CHECKED-IN  | 2023-10-?? |
-| Julia    |            | 2023-10-?? |
+| Akshitaa |CHECKED-IN  | 2023-10-11 |
+| Julia    | CHECKED-IN | 2023-10-17 |
 
 ### Step-by-step Guide (Updated for branch making)
 
