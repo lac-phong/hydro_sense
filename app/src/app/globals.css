@@ -74,7 +74,7 @@ body {
   /* Additional styling for a more interactive feel */
   &:hover 
   {
-    background-color: black; /* Change background on hover */
+    background-color: #5E754D; /* Change background on hover */
     color: white; /* Change text color on hover */
   }
 }

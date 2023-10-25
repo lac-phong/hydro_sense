@@ -36,7 +36,10 @@ const HeroSection = () => {
           </div>
           <h1 className="wp_text_container text-black mb-4 text-6xl font-bold">WELCOME</h1>            
           
-
+          <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '><span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>NAME{" "}</span></h1>
+          <div className='button-container'>
+              <button className='custom-button'>CREATE NEW SHEET</button>
+          </div>
         </div>
       </div>
     </div>
