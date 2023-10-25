@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.wp_text_container {
+  /* text-align: center;  Horizontal centering */
+  margin-left: 300px; /* Adjust the left margin */
+  padding-right: 10px; /* Adjust the right padding */
+  /*display: inline-block;*/
+}
+
+.name_text_container {
+  /* text-align: center;  Horizontal centering */
+  margin-left: 300px; /* Adjust the left margin */
+  padding-right: 10px; /* Adjust the right padding */
+  margin-bottom: 50px;
+}
+
+.button-container 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px; /* Vertical margin between buttons */
+}
+
+.button-additional-container 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px; /* Vertical margin between buttons */
+}
+
+.custom-button 
+{
+  margin-left: 180px; /* Adjust the left margin */
+  padding-right: 10px; /* Adjust the right padding */
+  background-color: transparent; /* Transparent background */
+  color: #787D6D; /* Black text color */
+  border: 2px solid #787D6D; /* Black border */
+  border-radius: 4px; /* Slightly rounded border */
+  padding: 8px 20px; /* Adjust padding as needed */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Additional styling for a more interactive feel */
+  &:hover 
+  {
+    background-color: #5E754D; /* Change background on hover */
+    color: white; /* Change text color on hover */
+  }
+}
+
+
+/* YourComponent.css */
+
+.custom-additional-button {
+  margin-top: 10px;
+  margin-left: 100px; /* Adjust the left margin */
+  padding-right: 10px; /* Adjust the right padding */
+  background-color: transparent;
+  border: 2px solid transparent; /* Transparent border */
+  border-radius: 5px;
+  padding: 2px; /* Padding set to 2 in both directions */
+  cursor: pointer;
+  color: black;
+
+  &:hover 
+  {
+    background-color: #f2f2f2; /* Change background on hover */
+    color: white; /* Change text color on hover */
+  }
+}
+
+
+.about-text{
+  color: #787D6D;
+}
+
+.garden-text{
+  color: #BBC275;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #BBC275, #787D6D);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 80px; /* Adjust the font size as needed */
+  text-align: center;
+}
+
+.container {
+  display: inline-block;
+}
