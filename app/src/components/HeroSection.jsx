@@ -1,25 +1,14 @@
-"use client";
-
 import React from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
-import logo from '../assets/logo.png';
-
-console.log(logo);
 
 const HeroSection = () => {
-    const imageStyle = {
-        width: '20px',
-        height: '20px',
-      };
-  
-    return (
-      
+    return (      
     <div className="flex">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center">
           <div className="wp_text_container text-black">
-            <img src={logo} alt="Logo" />
+            <Image src="/logo.png" width={20} height={20} alt="Logo" />
             <TypeAnimation
               sequence={[
                 "HYDRO SENSE", 
