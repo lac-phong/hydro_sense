@@ -4,11 +4,14 @@ import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection = () => {
     return (      
-    <div className="flex">
-      <div className="grid grid-cols-1 lg:grid-cols-12">
+    <div className="top">
+      <div class="container">
+        <div class="content">
+        <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center">
           <div className="wp_text_container text-black">
             <Image src="/logo.png" width={20} height={20} alt="Logo" />
+            <p>
             <TypeAnimation
               sequence={[
                 "HYDRO SENSE", 
@@ -22,6 +25,7 @@ const HeroSection = () => {
               style={{fontSize: '0.8em', display: 'inline-block'}}
               repeat={Infinity}
             />
+            </p>
           </div>
           <h1 className="wp_text_container text-black mb-4 text-6xl font-bold">WELCOME</h1>            
           
@@ -29,9 +33,14 @@ const HeroSection = () => {
           <div className='button-container'>
               <button className='custom-button'>CREATE NEW SHEET</button>
               <button className="custom-button"><span className="about-text">EDIT EXISTIN SHEETS</span></button>
+              <button className="custom-additional-button"><span className="about-text">ABOUT</span> <span className="garden-text">GARDEN</span></button>
+              <button className="custom-additional-button"><span className="about-text">EXISTIN SHEETS</span></button>
           </div>
         </div>
       </div>
+
+        </div>
+    </div>
     </div>
   )
 }
