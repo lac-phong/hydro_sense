@@ -30,6 +30,8 @@ body {
   /* text-align: center;  Horizontal centering */
   margin-left: 300px; /* Adjust the left margin */
   padding-right: 10px; /* Adjust the right padding */
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Vertically align the content */
   /*display: inline-block;*/
 }
 
@@ -120,4 +122,31 @@ body {
 
 .container {
   display: inline-block;
+  display: flex;
+  height: 100%;
+}
+
+.top-container {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Vertically align the content */
+}
+
+p {
+  margin-left: 10px; /* Add space to the left of the text */
+}
+
+.taskbar {
+  background-color: green;
+  flex: 3;
+  width: 25%; /* 1/4 of the screen width */
+}
+
+.content {
+  background-color: white;
+  flex: 8;
+  width: 75%; /* 3/4 of the screen width */
+}
+
+.top {
+  margin-top: 40px;
 }
