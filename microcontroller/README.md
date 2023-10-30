@@ -18,4 +18,4 @@ Raspberry Pi 4 Model B, Raspberry Pi OS Lite, Python3, Git.
 
 ## Libraries
 
-TBA
+Adafruit CircuitPython, busio, board, pyrebase, time (to use sleep)

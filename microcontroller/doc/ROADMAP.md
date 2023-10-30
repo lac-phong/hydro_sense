@@ -8,7 +8,7 @@ This document overviews the roadmap of the microcontroller team for HydroSense r
 
 | Task                         | Start Date | Due Date   | Status      |
 | ---------------------------- | ---------- | ---------- | ----------- |
-| Learn Git & Python           | 2023-10-05 | 2023-10-11 | In Progress |
+| Learn Git & Python           | 2023-10-05 | 2023-10-11 | DONE        |
 | OS, Wireless & Library Setup | 2023-10-05 | 2023-10-12 | In Progress |
 | Data Retrieval               | TBD        | 2023-10-15 |             |
 | RESTful API Integration      | TBD        | 2023-10-21 |             |
