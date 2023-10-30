@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
+import ExistingSheets from './ExistingSheets'
 
 const HeroSection = () => {
     return (      
@@ -32,7 +33,7 @@ const HeroSection = () => {
           <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '><span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>NAME{" "}</span></h1>
           <div className='button-container'>
               <button className='custom-button'>CREATE NEW SHEET</button>
-              <button className='custom-button'><span className='about-text'>EDIT EXISTING SHEET</span></button>
+              <ExistingSheets />
               <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
               <button className='custom-additional-button'> <span className='about-text'> EXISTING SHEETS</span> </button>
           </div>
