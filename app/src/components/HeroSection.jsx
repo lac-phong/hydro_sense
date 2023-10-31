@@ -34,8 +34,9 @@ const HeroSection = () => {
           <div className='button-container'>
               <button className='custom-button'>CREATE NEW SHEET</button>
               <ExistingSheets />
+             <a href='LINK OF ABOUT US PAGE'>
               <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
-              <button className='custom-additional-button'> <span className='about-text'> EXISTING SHEETS</span> </button>
+             </a> 
           </div>
         </div>
       </div>
