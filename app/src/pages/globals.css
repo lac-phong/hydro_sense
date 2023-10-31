@@ -16,6 +16,27 @@
   }
 }
 
+@media (max-width: 768px) {
+  .res-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 30% 30% 10%;
+    grid-template-areas:"header" "sidebar" "main" "section" "content" "footer"
+  }
+}
+
+.res-container {
+  display: grid;
+  gap: 5px;
+  margin: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "sidebar section content"
+    "footer footer footer";
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

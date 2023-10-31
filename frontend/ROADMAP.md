@@ -27,18 +27,23 @@ This document overviews the roadmap of the backend team for HydroSense referring
 
 ## Task Delegation
 
-| Task                                            | Assignee      | Due Date   | Status      |
-| ----------------------------------------------- | ------------- | ---------- | ----------- |
-| Learn Git & React                               | Frontend Team | 2023-10-12 | In Progress |
-| Create ReactJS application                      | David         | 2023-10-11 | In Progress |
-| Design UI/UX using Figma                        | Alan          | 2023-10-11 | In Progress |
-| Check-In ReactJS App and Figma Design to Github | Alan          | 2023-10-11 | In Progress |
-| Implement Home page                             | Krishiv       | 2023-10-23 |             |
-| Implement Taskbar                               | David         | 2023-10-23 |             |
-| Implement Sign-in and Login page                | Alan          | 2023-10-23 |             |
-| Implement About page                            | Krishiv       | 2023-10-29 |             |
-| Implement Existing sheets page                  | David         | 2023-10-29 |             |
-| Implement Profile page                          | Alan          | 2023-10-29 |             |
+| Task                                            	 | Assignee       | Due Date   | Status      |
+| ---------------------------------------------------| ---------------|------------|-------------|
+| Learn Git & React                              	 | Frontend Team  | 2023-10-12 | Completed	 |
+| Create next.js application                     	 | David          | 2023-10-11 | Completed	 |
+| Push application to GitHub					 	 | David		  |	2023-10-   | Completed   |
+| Add Logo, animated text, and "welcome" text	 	 | Krishiv		  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | Alan		 	  | 2023- 	   | Completed	 |
+| Reformat and align all components				 	 | David		  | 2023- 	   | In-Progress |
+| Create "about garden" page					 	 | Krishiv	      | 2023- 	   | In-Progress |
+| Add "Volunteer Hours" to "about garden" page	 	 | Janelle		  | 2023- 	   | In-Progress |
+| Add "Who We Are" to "about garden" page	  	 	 | Ethan		  | 2023- 	   | In-Progress |
+| Route the "about garden" button to the page		 | Alan		 	  | 2023- 	   | In-Progress |
+| Add Instagram and Discord icons to "About Garden"	 | Drew			  | 2023- 	   | In-Progress |
+| Add Instagram and Discord icons to home page		 | Krishiv		  | 2023- 	   | In-Progress |
+| Link volunteer reg link to the text			  	 | Alan			  | 2023- 	   | In-Progress |
+| 											         | Alan		 	  | 2023- 	   | In-Progress |
+
 
 ## Git Workflow Summary
 
@@ -75,6 +80,16 @@ Our `Learn Git & React` task would be marked completed by finishing this.
 | David   | CHECKED-IN | 2023-10-11 |
 | Alan    | CHECKED-IN | 2023-10-11 |
 | Krishiv | CHECKED-IN | 2023-10-11 |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
+| NAME 	  | 		   | 2023-	    |
 
 ### Step-by-step Guide (Updated for branch making)
 
