@@ -150,3 +150,12 @@ p {
 .top {
   margin-top: 40px;
 }
+
+html { background-color: #ffffff; } 
+body {
+    min-height: 100vh;
+    max-width: 400px;
+    background-color: papayawhip; 
+    margin: 0 auto;
+}
+
