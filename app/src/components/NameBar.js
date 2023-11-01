@@ -13,6 +13,7 @@ export default function NameBar() {
     return (
         <div>
             <input
+                className='text-black'
                 type="search"
                 placeholder="Name spreadsheet"
                 onChange={handleChange}

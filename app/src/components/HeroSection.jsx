@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
 import ExistingSheets from './ExistingSheets'
-import Login from './login';
+import Login from './Login';
 import Logout from './Logout';
+import NameBar from './NameBar';
+import { SpreadsheetContext } from './SpreadsheetContext';
 
 const HeroSection = () => {
+
+    const [userName, setUserName] = useState('');
+    const { spreadsheetInfo } = useContext(SpreadsheetContext)
 
     return (      
     <div className="top">
@@ -33,12 +38,16 @@ const HeroSection = () => {
           </div>
           <h1 className="wp_text_container text-black mb-4 text-6xl font-bold">WELCOME</h1>            
           
-          <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '><span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>NAME{" "}</span></h1>
+          <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '><span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>{userName}</span></h1>
           <div className='button-container'>
-              <button className='custom-button'>CREATE NEW SHEET</button>
+              <Login setUserName = {setUserName} />
+              <Logout setUserName = {setUserName} />
+              <NameBar />
               <ExistingSheets />
-             <a href='LINK OF ABOUT US PAGE'>
-              <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
+              <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+              <p className='text-black'>Spreadsheet ID: {spreadsheetInfo.id}</p>
+              <a href='LINK OF ABOUT US PAGE'>
+                <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
              </a> 
           </div>
         </div>

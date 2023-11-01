@@ -1,22 +1,26 @@
+import React, { useContext } from 'react'
 import useDrivePicker from 'react-google-drive-picker'
-
+import { SpreadsheetContext } from './SpreadsheetContext';
 
 function ExistingSheets() {
 
     const [openPicker, data] = useDrivePicker()
+    const { spreadsheetInfo, setSpreadsheetInfo } = useContext(SpreadsheetContext);
 
     const handleOpenPicker = () => {
       openPicker({
-        clientId:"932982470284-p2h35mousm7nd68pdhrcfa8pqnjuuak6.apps.googleusercontent.com",
-        developerKey:"AIzaSyCgEfFbD1Ure7Z7TswYc4c-wyVnFy591R8",
+        clientId:"274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com",
+        developerKey:"AIzaSyCScwxcDw0WuEaaG2gYW5oho8UXQazOnRY",
         viewId:"SPREADSHEETS",
-       // token:"ya29.a0AfB_byAakIjIPZQszEl7uUHrOOGeOwypIS4m-cy4aaeph_xf71hKyWbiKBMu0JjYlBI3Dmt9I3giLoNp-Pk6Ug1uE5ShSTdTzPA9POIIJPkb4W1FQ8hw8cqQM5EKKH5kThijzYn-fwrepTWdiUTIIsWAE3H7jgrXB1fBaCgYKAacSARISFQGOcNnCHxLLX0Omi5FqI422caFVew0171",
         showUploadView: true,
         showUploadFolders: true,
         supportDrives: true,
-        multiselect: true,
+        multiselect: false,
         callbackFunction: (data) => { 
           console.log(data);
+          if (data && data.docs && data.docs.length > 0) {
+            setSpreadsheetInfo({ ...spreadsheetInfo, name: data.docs.at(0).name, id: data.docs.at(0).id })
+          }
         }
       })
     }
