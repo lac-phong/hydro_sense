@@ -1,27 +1,31 @@
 import React, { useEffect, useContext } from 'react'
-import { gapi } from 'gapi-script'
 import { SpreadsheetContext } from './SpreadsheetContext';
 
 export default function CreateButton({ name }) {
 
     const { spreadsheetInfo, setSpreadsheetInfo } = useContext(SpreadsheetContext)
 
-    const CLIENT_ID = "86974978935-nlmnll9afjhk4clf0lke70co74e3f11g.apps.googleusercontent.com";
-    const API_KEY = "AIzaSyDqBrj4tYhf1dA8Kb9EaaeZOO3ffgGXXr8";
+    const CLIENT_ID = "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
+    const API_KEY = "AIzaSyCScwxcDw0WuEaaG2gYW5oho8UXQazOnRY";
     const SCOPES = "https://www.googleapis.com/auth/drive";
 
     useEffect(() => {
-        function start() {
-        gapi.client.init({
-            apiKey: API_KEY,
-            clientId: CLIENT_ID,
-            scope: SCOPES
-        })
-        };
-    
+      async function loadGapiScript() {
+        const gapi = await import('gapi-script').then((pack) => pack.gapi);
         gapi.load('client:auth2', start);
-    })
-    
+      }
+  
+      function start() {
+        gapi.client.init({
+          apiKey: API_KEY,
+          clientId: CLIENT_ID,
+          scope: SCOPES
+        });
+      }
+  
+      loadGapiScript();
+    }, [API_KEY, CLIENT_ID, SCOPES]);
+
     function createFile() {
         var accessToken = gapi.auth.getToken().access_token;
         fetch('https://sheets.googleapis.com/v4/spreadsheets', {
@@ -43,6 +47,6 @@ export default function CreateButton({ name }) {
         });
     }  
     return(
-        <button onClick={() => createFile()}>Create spreadsheet</button>
+        <button className='custom-button' onClick={() => createFile()}>CREATE NEW SPREADSHEET</button>
     );
 }
