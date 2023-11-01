@@ -2,8 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
 import ExistingSheets from './ExistingSheets'
+import Login from './login';
+import Logout from './Logout';
 
 const HeroSection = () => {
+
     return (      
     <div className="top">
       <div class="container">
