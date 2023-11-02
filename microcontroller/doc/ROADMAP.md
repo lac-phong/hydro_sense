@@ -9,20 +9,16 @@ This document overviews the roadmap of the microcontroller team for HydroSense r
 | Task                         | Start Date | Due Date   | Status      |
 | ---------------------------- | ---------- | ---------- | ----------- |
 | Learn Git & Python           | 2023-10-05 | 2023-10-11 | DONE        |
-| OS, Wireless & Library Setup | 2023-10-05 | 2023-10-12 | In Progress |
-| Data Retrieval               | TBD        | 2023-10-15 |             |
-| RESTful API Integration      | TBD        | 2023-10-21 |             |
+| OS, Wireless & Library Setup | 2023-10-05 | 2023-10-16 | DONE        |
+| Data Retrieval                  | 2023-10-16    | 2023-10-23 | DONE    |
+| Firebase Admin SDK Integration  | 2023-10-16    | 2023-10-25 | DONE    |
 
 ## Task Description
 
 - Learn Git & Python: Learn Git commands and be familiar with Python syntax.
 - OS, Wireless & Library Setup: Flash the SD card with Raspberry Pi OS Lite, configure wifi credentials. Enable SSH to allow remote access and management of the Raspberry Pi. Install Python onto the Raspberry Pi to run scripts and applications in a headless environment.
 - Data Retreival: Utilize Python scripts to communicate with the moisture sensor and retrieve real-time data.
-- RESTful API Integration: Design a RESTful API to allow external services to request and receive moisture data.
-
-## Task Delegation
-
-TBA
+- Firebase Admin SDK Integration: Using Firebase Admin SDK to send real-time data to the Firebase Realtime Database.
 
 ## Check-in
 

@@ -1,12 +1,28 @@
+#! /usr/bin/python3
+
 import board
 import busio
 import adafruit_sht31d
+import sys
 import time
 import firebase_admin
+from pathlib import Path
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate('key.json')
+# Get the absolute path of the script
+script_dir = Path(__file__).resolve().parent
+
+# Construct the absolute path to key.json, output.log, and error.log
+data_path = script_dir / 'key.json'
+log_path = script_dir / 'output.log'
+error_log_path = script_dir / 'error.log'
+
+# Redirect standard output and error to log files
+sys.stdout = open(log_path, 'a')
+sys.stderr = open(error_log_path, 'a')
+
+cred = credentials.Certificate(data_path)
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://hydro-sense-default-rtdb.firebaseio.com/'
 })
@@ -38,4 +54,4 @@ while True:
         'time': current_time
     })
 
-    time.sleep(30)
+    time.sleep(60)
