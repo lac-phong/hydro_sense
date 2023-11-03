@@ -180,3 +180,17 @@ body {
     margin: 0 auto;
 }
 
+.AboutGarden_text_container {
+  /* text-align: center;  Horizontal centering */
+  margin-left: 10px; /* Adjust the left margin */
+  padding-right: 300px; /* Adjust the right padding */
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Vertically align the content */
+  /*display: inline-block;*/
+}
+
+
+.test {
+  height:100vh;
+  width:100vh;
+}
