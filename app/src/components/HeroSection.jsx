@@ -6,6 +6,7 @@ import Login from './Login';
 import Logout from './Logout';
 import NameBar from './NameBar';
 import { SpreadsheetContext } from './SpreadsheetContext';
+import Link from 'next/link';
 
 const HeroSection = () => {
 
@@ -46,9 +47,9 @@ const HeroSection = () => {
               <ExistingSheets />
               <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
               <p className='text-black'>Spreadsheet ID: {spreadsheetInfo.id}</p>
-              <a href='LINK OF ABOUT US PAGE'>
-                <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
-             </a> 
+                <Link href='/AboutPage'>                 
+                    <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
+                </Link>
           </div>
         </div>
         
