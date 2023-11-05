@@ -1,7 +1,7 @@
 "use client";
 import { get, ref } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../components/firebaseConfig";
+import { database } from "../../config/firebaseConfig";
 
 export default function DataFetch() {
   const [test_data, setData] = useState([]);
