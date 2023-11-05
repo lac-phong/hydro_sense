@@ -15,8 +15,8 @@ const HeroSection = () => {
 
     return (      
     <div className="top">
-      <div class="container">
-        <div class="content">
+      <div className="container">
+        <div className="content">
         <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center">
           <div className="wp_text_container text-black">
