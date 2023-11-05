@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Resolve Dependency Issue
+
+react-google-login@5.2.2 package only supports react@16 or @17. Use @leecheuk forked branch instead to resolve the dependency issue.
+
+```
+npm uninstall react-google-login
+npm install @leecheuk/react-google-login
+```

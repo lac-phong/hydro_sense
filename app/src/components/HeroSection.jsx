@@ -50,6 +50,9 @@ const HeroSection = () => {
                 <Link href='/AboutPage'>                 
                     <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
                 </Link>
+                <Link href='/DataFetch'>                 
+                        <button className='custom-button'>Fetch Data</button>
+                </Link>
           </div>
         </div>
         
