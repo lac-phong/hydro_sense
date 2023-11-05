@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Installing Dependencies
+
+Make sure you are in the app directory first (use cd)
+
+```
+npm i
+npm install --legacy-peer-deps gapi-script react-google-login
+npm run dev
+```
+
 ## Getting Started
 
 First, run the development server:
