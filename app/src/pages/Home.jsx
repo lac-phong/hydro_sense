@@ -15,8 +15,8 @@ const HomePage = () => {
 
     return (      
     <div className="top">
-      <div class="container">
-        <div class="content">
+      <div className="container">
+        <div className="content">
         <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center">
           <div className="wp_text_container text-black">
@@ -55,6 +55,9 @@ const HomePage = () => {
                     <button className='custom-additional-button'>MEET THE TEAM</button>
                 </Link>
 
+                <Link href='/DataFetch'>                 
+                        <button className='custom-button'>Fetch Data</button>
+                </Link>
           </div>
         </div>
         
