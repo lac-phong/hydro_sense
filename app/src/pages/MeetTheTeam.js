@@ -52,6 +52,10 @@ const MeetTheTeam = () => {
         </div>
       </div>
 
+
+
+
+
       <div className="flex bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-center justify-center">
         <div className="flex bg-gray-100 items-center justify-center mr-2 rounded-lg">
           <h2 className="ml-4">D I S C O R D</h2>
