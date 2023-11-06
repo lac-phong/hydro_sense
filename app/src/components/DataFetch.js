@@ -1,10 +1,20 @@
 import { get, ref } from "firebase/database";
 import { useEffect, useState, useContext } from "react";
+import dayjs from "dayjs";
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { TimePicker, DatePicker } from '@mui/x-date-pickers';
 import { database } from "../../config/firebaseConfig";
 import { SpreadsheetContext } from "../components/SpreadsheetContext";
 
+dayjs.extend(customParseFormat)
+
 export default function DataFetch() {
-  const [test_data, setData] = useState([]);
+  
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+  const [testData, setData] = useState([]);
   const { spreadsheetInfo } = useContext(SpreadsheetContext)
 
   const CLIENT_ID = "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
@@ -65,20 +75,27 @@ export default function DataFetch() {
     var accessToken = gapi.auth.getToken().access_token;
 
     var labels = ['Date', 'Time', 'Temperature', 'Humidity'];
+
+    const selectedDateStr = dayjs(selectedDate).format('YYYY-MM-DD');
+    const selectedTimeStr = dayjs(selectedTime, 'HH:mm:ss').format('HH:mm:ss');
   
     // Transform test_data into the required format
-    var values = test_data.map(data => [data.date, data.time, data.temperature, data.humidity]);
+    const filteredData = testData.filter(item => item.date >= selectedDateStr && item.time >= selectedTimeStr);
+    console.log(selectedDateStr)
+    console.log(selectedTimeStr)
+    console.log(testData)
+    var values = filteredData.map(data => [data.date, data.time, data.temperature, data.humidity]);
   
     values.unshift(labels)
 
-    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetInfo.id}/values/Sheet1!A1:D${test_data.length + 1}?valueInputOption=USER_ENTERED`, {
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetInfo.id}/values/Sheet1!A1:D${testData.length + 1}?valueInputOption=USER_ENTERED`, {
       method: "PUT",
       headers: new Headers({
         'Authorization': 'Bearer ' + accessToken,
         'Content-Type': 'application/json'
       }),
       body: JSON.stringify({
-        "range": "Sheet1!A1:D" + (test_data.length + 1),
+        "range": "Sheet1!A1:D" + (testData.length + 1),
         "majorDimension": "ROWS",
         "values": values
       })
@@ -101,6 +118,12 @@ export default function DataFetch() {
   
 
   return (
-    <button className='custom-button' onClick={updateSpreadsheet}>Update Spreadsheet</button>
+    <div>
+      <button className='custom-button' onClick={updateSpreadsheet}>UPDATE SPREADSHEET</button>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <DatePicker label="Select data from date" value={selectedDate} onChange={(newDate) => setSelectedDate(newDate)}/>
+        <TimePicker label="Select data from time" value={selectedTime} onChange={(newTime) => setSelectedTime(newTime)}/>
+      </LocalizationProvider>
+    </div>
   );
 }
