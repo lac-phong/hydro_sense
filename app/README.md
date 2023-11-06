@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Installing Dependencies
+
+Make sure you are in the app directory first (use cd)
+
+```
+npm i
+npm install --legacy-peer-deps gapi-script react-google-login
+npm run dev
+```
+
 ## Getting Started
 
 First, run the development server:
@@ -34,3 +44,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Resolve Dependency Issue
+
+react-google-login@5.2.2 package only supports react@16 or @17. Use @leecheuk forked branch instead to resolve the dependency issue.
+
+```
+npm uninstall react-google-login
+npm install @leecheuk/react-google-login
+```

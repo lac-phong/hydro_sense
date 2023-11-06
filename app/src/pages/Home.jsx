@@ -1,17 +1,18 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
-import ExistingSheets from './ExistingSheets';
-import CreateSheet from './CreateSheet';
-import Login from './Login';
-import Logout from './Logout';
-import NameBar from './NameBar';
-import { SpreadsheetContext } from './SpreadsheetContext';
+import ExistingSheets from '../components/ExistingSheets'
+import Login from '../components/Login';
+import Logout from '../components/Logout';
+import NameBar from '../components/NameBar';
+import DataFetch from '@/components/DataFetch';
+import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
-const HeroSection = () => {
-  const [userName, setUserName] = useState('');
-  const { spreadsheetInfo } = useContext(SpreadsheetContext);
+const HomePage = () => {
+
+    const [userName, setUserName] = useState('');
+    const { spreadsheetInfo } = useContext(SpreadsheetContext)
 
   return (
     <div className="top">
@@ -51,19 +52,16 @@ const HeroSection = () => {
               ) : (
                 <Login setUserName={setUserName} />
               )}
-
               <NameBar />
-              {userName && <ExistingSheets />}
-
+              <ExistingSheets />
+              <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+              <DataFetch />
               <Link href='/AboutPage'>
                 <button className='custom-additional-button'>
                   <span className='about-text'> ABOUT </span>
-                  <span className='garden-text'>GARDEN</span>
+                  <span className='garden-text'> GARDEN </span>
                 </button>
               </Link>
-
-              <br />
-
               <Link href='/MeetTheTeam'>
                 <button className='custom-additional-button'>ABOUT TEAM</button>
               </Link>
@@ -72,7 +70,8 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+    
+  )
+}
 
-export default HeroSection;
+export default HomePage
