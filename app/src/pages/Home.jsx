@@ -8,7 +8,7 @@ import NameBar from '../components/NameBar';
 import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
-const HeroSection = () => {
+const HomePage = () => {
 
     const [userName, setUserName] = useState('');
     const { spreadsheetInfo } = useContext(SpreadsheetContext)
@@ -61,4 +61,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default HomePage
