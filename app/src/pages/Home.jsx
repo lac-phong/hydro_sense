@@ -49,6 +49,12 @@ const HomePage = () => {
                 <Link href='/AboutPage'>                 
                     <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
                 </Link>
+
+              <br />
+                <Link href='/MeetTheTeam'>                 
+                    <button className='custom-additional-button'>MEET THE TEAM</button>
+                </Link>
+
           </div>
         </div>
         
