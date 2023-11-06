@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
-import ExistingSheets from '../components/ExistingSheets'
+import ExistingSheets from '../components/ExistingSheets';
 import Login from '../components/Login';
 import Logout from '../components/Logout';
 import NameBar from '../components/NameBar';
@@ -52,10 +52,11 @@ const HomePage = () => {
               ) : (
                 <Login setUserName={setUserName} />
               )}
-              <NameBar />
-              <ExistingSheets />
+              {userName && <NameBar />}
+              {userName && <ExistingSheets />}
               <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
               <DataFetch />
+
               <Link href='/AboutPage'>
                 <button className='custom-additional-button'>
                   <span className='about-text'> ABOUT </span>
