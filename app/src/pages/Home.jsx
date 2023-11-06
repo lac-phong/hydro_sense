@@ -1,14 +1,14 @@
 import React, { useState, useContext, useEffect } from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
-import ExistingSheets from './ExistingSheets'
-import Login from './Login';
-import Logout from './Logout';
-import NameBar from './NameBar';
-import { SpreadsheetContext } from './SpreadsheetContext';
+import ExistingSheets from '../components/ExistingSheets'
+import Login from '../components/Login';
+import Logout from '../components/Logout';
+import NameBar from '../components/NameBar';
+import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
-const HeroSection = () => {
+const HomePage = () => {
 
     const [userName, setUserName] = useState('');
     const { spreadsheetInfo } = useContext(SpreadsheetContext)
@@ -67,4 +67,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default HomePage
