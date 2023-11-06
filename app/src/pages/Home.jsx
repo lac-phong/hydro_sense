@@ -5,6 +5,7 @@ import ExistingSheets from '../components/ExistingSheets'
 import Login from '../components/Login';
 import Logout from '../components/Logout';
 import NameBar from '../components/NameBar';
+import DataFetch from '@/components/DataFetch';
 import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
@@ -51,18 +52,16 @@ const HomePage = () => {
               ) : (
                 <Login setUserName={setUserName} />
               )}
-
               <NameBar />
               <ExistingSheets />
+              <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+              <DataFetch />
               <Link href='/AboutPage'>
                 <button className='custom-additional-button'>
                   <span className='about-text'> ABOUT </span>
-                  <span className='garden-text'>GARDEN</span>
+                  <span className='garden-text'> GARDEN </span>
                 </button>
               </Link>
-
-              <br />
-
               <Link href='/MeetTheTeam'>
                 <button className='custom-additional-button'>ABOUT TEAM</button>
               </Link>
