@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import ExistingSheets from './ExistingSheets';
+import CreateSheet from './CreateSheet';
 import Login from './Login';
 import Logout from './Logout';
 import NameBar from './NameBar';
@@ -52,7 +53,8 @@ const HeroSection = () => {
               )}
 
               <NameBar />
-              <ExistingSheets />
+              {userName && <ExistingSheets />}
+
               <Link href='/AboutPage'>
                 <button className='custom-additional-button'>
                   <span className='about-text'> ABOUT </span>
