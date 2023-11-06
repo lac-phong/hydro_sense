@@ -227,3 +227,40 @@ height: 100%;
       transform: translate3d(0, 0, 0) translateZ(0);
     }
   }
+
+  .wavy {
+    animation-name: wavy;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  @keyframes wavy {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: -15px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .hover\:animate-bounce {
+    animation: bounce 1.5s ease hover; /* Increase the duration (e.g., 1.5s) for a slower bounce */
+  }
