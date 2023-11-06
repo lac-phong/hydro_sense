@@ -31,12 +31,12 @@ const AboutPage = () => {
 
         <h2>Pictures</h2> 
           <h5>The Garden: </h5>
-          <Image src="garden1.jpeg" width={50} height={50} alt="Pic1"/>
-          <Image src="garden2.jpeg" width={50} height={50} alt="Pic2"/>
-          <Image src="garden3.jpg" width={50} height={50} alt="Pic3"/>
-          <Image src="IMG_7821.jpg" width={50} height={50} alt="Pic4"/>
-          <Image src="IMG_7822.jpg" width={50} height={50} alt="Pic5"/>
-          <Image src="IMG_7823.jpg" width={50} height={50} alt="Pic6"/>
+          <Image src="/garden1.jpeg" width={50} height={50} alt="Pic1"/>
+          <Image src="/garden2.jpeg" width={50} height={50} alt="Pic2"/>
+          <Image src="/garden3.jpg" width={50} height={50} alt="Pic3"/>
+          <Image src="/IMG_7821.jpg" width={50} height={50} alt="Pic4"/>
+          <Image src="/IMG_7822.jpg" width={50} height={50} alt="Pic5"/>
+          <Image src="/IMG_7823.jpg" width={50} height={50} alt="Pic6"/>
 
         <h2>Purpose</h2>
         <ul>
