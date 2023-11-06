@@ -5,6 +5,7 @@ import ExistingSheets from '../components/ExistingSheets'
 import Login from '../components/Login';
 import Logout from '../components/Logout';
 import NameBar from '../components/NameBar';
+import DataFetch from '@/components/DataFetch';
 import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
@@ -46,18 +47,13 @@ const HomePage = () => {
               <NameBar />
               <ExistingSheets />
               <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
-                <Link href='/AboutPage'>                 
-                    <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
-                </Link>
-
-              <br />
-                <Link href='/MeetTheTeam'>                 
-                    <button className='custom-additional-button'>MEET THE TEAM</button>
-                </Link>
-
-                <Link href='/DataFetch'>                 
-                        <button className='custom-button'>Fetch Data</button>
-                </Link>
+              <DataFetch />
+              <Link href='/AboutPage'>                 
+                  <button className='custom-additional-button'><span className='about-text'> ABOUT </span><span className='garden-text'>GARDEN</span></button>
+              </Link>
+              <Link href='/MeetTheTeam'>                 
+                  <button className='custom-additional-button'>MEET THE TEAM</button>
+              </Link>
           </div>
         </div>
         
