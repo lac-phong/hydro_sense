@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image'
 
 const MeetTheTeam = () => {
@@ -42,13 +44,23 @@ const MeetTheTeam = () => {
           <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">
             IOTA CLASS FA'23
           </h1>
-          <Image
-            src="/HydroSenseTeam.jpg"
-            width={500}
-            height={500}
-            alt="Pic1"
-            className="w-full h-auto rounded-lg"
-          />
+            <Carousel showStatus={false} showThumbs={false} infiniteLoop autoPlay interval={5000}>
+            <div>
+              <Image src="/HydroSenseTeam.jpg" width={500} height={500} alt="Pic1" />
+            </div>
+            <div>
+              <Image src="/biglittlepicture.jpg" width={500} height={500} alt="Pic2" />
+            </div>
+            <div>
+              <Image src="/nmedinner.jpg" width={500} height={500} alt="Pic3" />
+            </div>
+            <div>
+              <Image src="/selfiepic.jpg" width={500} height={500} alt="Pic4" />
+            </div>
+            <div>
+              <Image src="/spartantacos.png" width={500} height={500} alt="Pic5" />
+            </div>
+         </Carousel>
         </div>
       </div>
 
