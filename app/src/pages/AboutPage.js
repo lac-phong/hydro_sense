@@ -2,63 +2,123 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+
 const AboutPage = () => {
-  return (
-    <nav>
-    <div className="top"></div>
-      <div class="container"></div>
-        <div class="content"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-12"></div>
-        <div className="col-span-7 place-self-center"></div>
-      <div>
-        <h1 className="text-black mb-5 text-4xl font-bold">About the SJSU Garden</h1>
-      </div>
+ return (
+   <nav  className="bg-blue-200">
 
-      <div>
-        <h2>Volunteer Hours:</h2>
-        <p>Augest 28 - December 8</p>
-        <ul>
-          <li>Tuesdays and Thursdays 8:30am-11am & Saturdays 9am-11am</li>
-          <li>Please register at <a href='https://linktr.ee/SJSUGarden'>https://linktr.ee/SJSUGarden.</a></li>
-          <li>Open Hours:August 28 - December 8; Mondays 8am - 2pm</li>
-        </ul>
-        <br></br>
-        <h2>Who We are</h2>
-        <ul>
-          <li>In 2014, the SJSU Campus Community Garden was established as a result of a student-led initiative. The garden was created to provide students a space to gain access to healthy food, learn about sustainable organic garden practices and earn service learning hours.</li>
-          <li>The garden is located at 372 E. San Salvador Street (across from the Dining Commons)</li>
-        </ul>
-        <br></br>
-        <h2>Pictures</h2> 
-          <h5>The Garden: </h5>
-          <Image src="garden1.jpeg" width={50} height={50} alt="Pic1"/>
-          <Image src="garden2.jpeg" width={50} height={50} alt="Pic2"/>
-          <Image src="garden3.jpg" width={50} height={50} alt="Pic3"/>
-          <Image src="IMG_7821.jpg" width={50} height={50} alt="Pic4"/>
-          <Image src="IMG_7822.jpg" width={50} height={50} alt="Pic5"/>
-          <Image src="IMG_7823.jpg" width={50} height={50} alt="Pic6"/>
-        <br></br>
-        <h2>Purpose</h2>
-        <ul>
-          <li>The garden is on a quarter acre of land and it includes multiple fruit trees, compost and gray water system. The garden exists to provide the SJSU students, staff, faculty, and the surrounding community with an opportunity to participate in food justice, accessibility to fresh and healthy food while engaging in cultural exchange and cooperation.</li>
-          <li>The community garden is a place where students can learn and participate in the process of growing food sustainably, but it does not end there! Students can also harvest and enjoy organic, free, and locally grown produce. This space provides a place for student initiative, cooperation and cultural exchange using the growing of food as an exploration of community involvement.</li>
-        </ul>
-        <br></br>
-        <h2>Sustainability at the Garden</h2>
-        <ul>
-          <li>The community garden is chemical free (organic) which means that they do not use any pesticides or synthetic fertilizers. Furthermore, the garden is designed around the principles of permaculture and regenerative agriculture, meaning that they try to imitate the natural process. In the garden they have over sixty different plant species from perennial fruit trees and flowers to annual vegetable crops. The garden ecosystem is diverse with multiple pollinators and creatures.</li>
-          <li>They have their own composting and gray water system that allows then to reuse and reduce the organic waste. Everything is incorporated into the garden again using sustainable methods.</li>
-        </ul>
-        <br></br>
-        <h2>Follow Them on Instagram:</h2>
-        <a href='https://www.instagram.com/sjsugarden/'>@sjsugarden</a>
-        <br></br>
-        <h3>Questions?</h3>
-        <p>Contact Matthew Mangoni, Garden Coordinator, at matthew.mangoni@sjsu.edu. This event is wheelchair accessible. Please contact Matthew at the soonest for any sign language interpreter or other accommodation requests.</p>
-      </div>
+     <div className="flex flex-col lg:flex-row">
+       <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
+       <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">WHO THEY ARE</h1>
+         <u1 className="mb-4">
+           <li className="ml-9">In 2014, the SJSU Campus Community Garden was established as a result of a student-led initiative. The garden was created to provide students a space to gain access to healthy food, learn about sustainable organic garden practices and earn service learning hours.</li>
+           <li className="ml-9">The garden is located at 372 E. San Salvador Street (across from the Dining Commons)</li>
+         </u1>
+       </div>
+     </div>
 
-    </nav>
-  )
+
+     <div className="bg-gray-100 p-4 ml-5 mt-2 mr-5 mb-5 rounded-lg">
+       <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">PURPOSE</h1>
+       <u1>
+         <li className="ml-9">The object of the Hydro Sense Project was to help out <span className="underline font-semibold">SJSU Community Garden</span> to <span className="underline font-semibold">optimize</span> its water usage</li>
+         <li className="ml-9">We wanted to achieve this by automating the process of recording the moisture and temperature data throughout the day for the garden to develop better watering practices and systems</li>
+       </u1>
+      
+     </div>
+
+
+     <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg">
+       <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">THEIR CONTACT INFORMATION</h1>
+       <u1>
+         <li className="ml-9">Matthew Mangoni [ Garden Coordinator ]</li>
+         <li className="ml-9">matthew.mangoni@sjsu.edu</li>
+         <li className="ml-9">Please contact Matthew at the soonest for any sign language interpreter or other accommodation requests.</li>
+       </u1>
+     </div>
+
+
+     <div className="flex bg-gray-100 p-4 ml-5 mt-2 mr-5 mb-5 rounded-lg items-center justify-center">
+       <div className="w-5/6 flex flex-col items-center overflow-x-auto">
+         <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">
+           GARDEN PICS
+         </h1>
+         <div className="flex space-x-6"> {/* Add space-x-4 class for horizontal gap */}
+           <Image
+             src="/sunflower.jpg"
+             width={800}
+             height={600}
+             alt="Pic1"
+             className="w-1/2 h-auto rounded-lg"
+           />
+           <Image
+             src="/garden2.jpeg"
+             width={800}
+             height={600}
+             alt="Pic1"
+             className="w-1/2 h-auto rounded-lg"
+           />
+           <Image
+             src="/garden3.jpg"
+             width={800}
+             height={600}
+             alt="Pic1"
+             className="w-1/2 h-auto rounded-lg"
+           />
+           <Image
+             src="/IMG_7821.jpg"
+             width={800}
+             height={600}
+             alt="Pic1"
+             className="w-1/2 h-auto rounded-lg"
+           />
+           <Image
+             src="/IMG_7822.jpg"
+             width={800}
+             height={600}
+             alt="Pic1"
+             className="w-1/2 h-auto rounded-lg"
+           />
+           <Image
+             src="/IMG_7823.jpg"
+             width={800}
+             height={600}
+             alt="Pic1"
+             className="w-1/2 h-auto rounded-lg"
+           />
+         </div>
+       </div>
+     </div>
+
+     <div className="flex bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-center justify-center">
+       <div className="flex bg-gray-100 items-center justify-center mr-2 rounded-lg">
+         <h2 className="ml-4">D I S C O R D</h2>
+         <Link href="https://discord.gg/X8PGQ5WAV" target="_blank" rel="noopener noreferrer">
+           <button className="ml-3 hover:bg-gray-300 p-2 rounded-lg transition duration-300">
+             <Image src="/discord.png" width={50} height={50} alt="Pic1" className="rounded-full hover:animate-bounce"/>
+           </button>
+         </Link>
+       </div>
+
+       <div className="flex bg-gray-100 items-center justify-center ml-2 rounded-lg h-full">
+         <h2 className="ml-4"> I N S T A G R A M</h2>
+         <Link href="https://www.instagram.com/pnmf23/" target="_blank" rel="noopener noreferrer">
+           <button className="ml-3 hover:bg-gray-300 p-2 rounded-lg transition duration-300">
+             <Image src="/instagram_icon.png" width={50} height={50} alt="Pic1" className="rounded-full hover:animate-bounce"/>
+           </button>
+         </Link>
+       </div>
+     </div>
+
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+   </nav>
+ )
 }
 
 export default AboutPage
