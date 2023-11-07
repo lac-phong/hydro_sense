@@ -77,7 +77,7 @@ const HomePage = () => {
           <u1 className="mb-4"> 
             <li className="ml-9">Water Conservation: By optimizing watering practices, we reduce water wastage and promote responsible water usage.</li>
             <li className="ml-9">Healthy Plants: Well-monitored moisture levels lead to healthier, more vibrant plant life.</li>
-            <li className="ml-9">Sustainability: The Hydro Sense Project aligns with SJSU's commitment to sustainability and environmental stewardship.</li>
+            <li className="ml-9">Sustainability: The Hydro Sense Project aligns with SJSU&apos;s commitment to sustainability and environmental stewardship.</li>
             <li className="ml-9">Community Engagement: We encourage SJSU students, faculty, and local residents to actively participate in this eco-friendly endeavor.</li>
           </u1>
         </div>
