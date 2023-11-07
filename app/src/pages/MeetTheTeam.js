@@ -4,9 +4,14 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image'
 
+const pageStyle = {
+  background: '#8fb6ab'
+};
+
 const MeetTheTeam = () => {
   return (
-    <nav>
+    <nav  style={pageStyle}>
+      <br />
       <div className="bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
         <h1 className="wavy text-base sm:text-3.5xl md:text-4xl lg:text-4.5xl font-bold text-center">MEET THE TEAM</h1>
       </div>

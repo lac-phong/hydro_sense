@@ -1,11 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+const pageStyle = {
+  background: '#8fb6ab'
+};
 
 const AboutPage = () => {
+  const carouselStyle = {
+    maxWidth: '750px', // Set a maximum width for the carousel
+    margin: '0 auto',  // Center the carousel
+  };
+
  return (
-   <nav  className="bg-blue-200">
+   <nav style={pageStyle}>
+    <br />
     <div className="bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
        <h1 className="wavy text-base sm:text-3.5xl md:text-4xl lg:text-4.5xl font-bold text-center">ABOUT THE GARDEN</h1>
      </div>
@@ -63,50 +74,19 @@ const AboutPage = () => {
          <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">
            GARDEN PICS
          </h1>
-         <div className="flex space-x-6"> {/* Add space-x-4 class for horizontal gap */}
-           <Image
-             src="/sunflower.jpg"
-             width={800}
-             height={600}
-             alt="Pic1"
-             className="w-1/2 h-auto rounded-lg"
-           />
-           <Image
-             src="/garden2.jpeg"
-             width={800}
-             height={600}
-             alt="Pic1"
-             className="w-1/2 h-auto rounded-lg"
-           />
-           <Image
-             src="/garden3.jpg"
-             width={800}
-             height={600}
-             alt="Pic1"
-             className="w-1/2 h-auto rounded-lg"
-           />
-           <Image
-             src="/IMG_7821.jpg"
-             width={800}
-             height={600}
-             alt="Pic1"
-             className="w-1/2 h-auto rounded-lg"
-           />
-           <Image
-             src="/IMG_7822.jpg"
-             width={800}
-             height={600}
-             alt="Pic1"
-             className="w-1/2 h-auto rounded-lg"
-           />
-           <Image
-             src="/IMG_7823.jpg"
-             width={800}
-             height={600}
-             alt="Pic1"
-             className="w-1/2 h-auto rounded-lg"
-           />
-         </div>
+         <div className="space-x-4" style={carouselStyle}>
+            <Carousel showStatus={false} showThumbs={false} infiniteLoop autoPlay interval={3000}>
+              <div>
+                <Image src="/IMG_7821.jpg" width={300} height={200} alt="Pic2" />
+              </div>
+              <div>
+                <Image src="/IMG_7822.jpg" width={300} height={200} alt="Pic3" />
+              </div>
+              <div>
+                <Image src="/IMG_7823.jpg" width={300} height={200} alt="Pic4" />
+              </div>
+            </Carousel>
+          </div>
        </div>
      </div>
 

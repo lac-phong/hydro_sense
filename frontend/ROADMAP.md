@@ -34,6 +34,17 @@ This document overviews the roadmap of the backend team for HydroSense referring
 | Push application to GitHub					 	 | David		  |	2023-10-   | Completed   |
 | Add Logo, animated text, and "welcome" text	 	 | Krishiv		  | 2023- 	   | Completed	 |
 | Add Name text, "create new sheet" button	 	 	 | Alan		 	  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | 		 	  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | 		 	  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | 		 	  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | 		 	  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | 		 	  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | 		 	  | 2023- 	   | Completed	 |
+| Add Name text, "create new sheet" button	 	 	 | 		 	  | 2023- 	   | Completed	 |
+
+
+
+
 | Reformat and align all components				 	 | David		  | 2023- 	   | In-Progress |
 | Create "about garden" page					 	 | Krishiv	      | 2023- 	   | In-Progress |
 | Add "Volunteer Hours" to "about garden" page	 	 | Janelle		  | 2023- 	   | In-Progress |
