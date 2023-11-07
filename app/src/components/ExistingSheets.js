@@ -17,7 +17,6 @@ function ExistingSheets() {
         supportDrives: true,
         multiselect: false,
         callbackFunction: (data) => { 
-          console.log(data);
           if (data && data.docs && data.docs.length > 0) {
             setSpreadsheetInfo({ ...spreadsheetInfo, name: data.docs.at(0).name, id: data.docs.at(0).id })
             console.log(data.docs.at(0).name)
