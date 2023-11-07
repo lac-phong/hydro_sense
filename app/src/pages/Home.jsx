@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
-import ExistingSheets from '../components/ExistingSheets'
+import ExistingSheets from '../components/ExistingSheets';
 import Login from '../components/Login';
 import Logout from '../components/Logout';
 import NameBar from '../components/NameBar';
@@ -10,10 +10,8 @@ import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
 const HomePage = () => {
-
-    const [userName, setUserName] = useState('');
-    const { spreadsheetInfo } = useContext(SpreadsheetContext)
-
+  const [userName, setUserName] = useState('');
+  const { spreadsheetInfo } = useContext(SpreadsheetContext);
   return (
     <div className="top">
       <div class="container">
@@ -54,7 +52,7 @@ const HomePage = () => {
               )}
               <NameBar />
               <ExistingSheets />
-              <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+              {spreadsheetInfo.name && (<p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>)}
               <DataFetch />
               <Link href='/AboutPage'>
                 <button className='custom-additional-button'>
