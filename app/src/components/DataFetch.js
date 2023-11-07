@@ -19,24 +19,67 @@ export default function DataFetch() {
 
   const CLIENT_ID = "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
   const API_KEY = "AIzaSyCScwxcDw0WuEaaG2gYW5oho8UXQazOnRY";
-  const SCOPES = "https://www.googleapis.com/auth/drive";
+  const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
   useEffect(() => {
-      async function loadGapiScript() {
-        const gapi = await import('gapi-script').then((pack) => pack.gapi);
-        gapi.load('client:auth2', start);
-      }
+    async function loadGapiScript() {
+      const gapi = await import('gapi-script').then((pack) => pack.gapi);
+      gapi.load('client:auth2', start);
+    }
+
+    async function refreshToken() {
+      const authInstance = gapi.auth2.getAuthInstance();
+      let REFRESH_TOKEN
+      authInstance.grantOfflineAccess()
+        .then((res) => {
+          console.log(res);
+          // Save the refresh token
+          this.data.refreshToken = res.code;
+          REFRESH_TOKEN = res.code;
+        });
+      const response = await fetch('https://oauth2.googleapis.com/token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          'refresh_token': REFRESH_TOKEN,
+          'client_id': CLIENT_ID,
+          'grant_type': 'refresh_token'
+        })
+      });
+     
+      const data = await response.json();
+     
+      // Update the token
+      gapi.auth.setToken({
+        access_token: data.access_token,
+        expires_at: Date.now() + data.expires_in * 1000
+      });
+    }
   
-      function start() {
-        gapi.client.init({
+    function start() {
+      const authInstance = gapi.auth2.getAuthInstance();
+      // Check if the token is expired
+      if (gapi.auth.getToken().expires_at < Date.now()) {
+        // If the token is expired, refresh it
+        refreshToken();
+      }
+      if (!authInstance) {
+        gapi.auth2.init({
           apiKey: API_KEY,
           clientId: CLIENT_ID,
           scope: SCOPES
+        }).catch((error) => {
+          console.error('Error initializing gapi client:', error);
         });
       }
+    }
   
-      loadGapiScript();
-    }, [API_KEY, CLIENT_ID, SCOPES]);
+    loadGapiScript();
+  }, [API_KEY, CLIENT_ID, SCOPES]);
+  
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -72,18 +115,26 @@ export default function DataFetch() {
   }, []);
 
   function updateSpreadsheet() {
+
     var accessToken = gapi.auth.getToken().access_token;
 
     var labels = ['Date', 'Time', 'Temperature', 'Humidity'];
 
     const selectedDateStr = dayjs(selectedDate).format('YYYY-MM-DD');
     const selectedTimeStr = dayjs(selectedTime, 'HH:mm:ss').format('HH:mm:ss');
+
+    console.log("Selected date " + selectedDate)
+    console.log("Selected time " + selectedTime)
+
+    let filteredData = testData
   
     // Transform test_data into the required format
-    const filteredData = testData.filter(item => item.date >= selectedDateStr && item.time >= selectedTimeStr);
-    console.log(selectedDateStr)
-    console.log(selectedTimeStr)
-    console.log(testData)
+    if ((selectedDate != null) && (selectedTime != null)) {
+      filteredData = testData.filter(item => item.date >= selectedDateStr && item.time >= selectedTimeStr);
+      console.log(selectedDateStr)
+      console.log(selectedTimeStr)
+      console.log(testData)
+    }
     var values = filteredData.map(data => [data.date, data.time, data.temperature, data.humidity]);
   
     values.unshift(labels)
@@ -101,8 +152,9 @@ export default function DataFetch() {
       })
     })
     .then((res) => {
+      console.log(res)
       if (!res.ok) {
-        throw new Error('Network response was not ok');
+        return res.text().then(text => { throw new Error(`Error: ${res.status}, ${text}`); });
       }
       return res.json();
     })

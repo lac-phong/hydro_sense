@@ -1,8 +1,7 @@
 import { GoogleLogout } from "@leecheuk/react-google-login";
 import React from "react";
 
-const clientId =
-  "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
+const CLIENT_ID = "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
 
 function Logout({ setUserName, setSpreadsheetInfo, spreadsheetInfo }) {
   const onSuccess = () => {
@@ -16,7 +15,7 @@ function Logout({ setUserName, setSpreadsheetInfo, spreadsheetInfo }) {
 
   return (
     <GoogleLogout
-      clientId={clientId}
+      clientId={CLIENT_ID}
       buttonText={"Logout"}
       onLogoutSuccess={onSuccess}
     />
