@@ -24,7 +24,7 @@ const HomePage = () => {
       <br />
       <div className="flex bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
         <div className="w-1/10">
-          <Image
+          <img
             src="/hs_logo.png"
             alt="Hydro Sense Logo"
             className="w-10 h-15"
