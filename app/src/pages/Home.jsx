@@ -48,7 +48,13 @@ const HomePage = () => {
 
       <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 rounded-lg">
         <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">W E L C O M E</h1>
-        <h1 className='mb-4 text-6xl font-bold '><span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>{userName}</span></h1>
+        {userLoggedIn && (
+                <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '>
+                  <span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>
+                    {userName}
+                  </span>
+                </h1>
+        )}
       </div>
 
       <div className="flex flex-col lg:flex-row">
@@ -73,11 +79,14 @@ const HomePage = () => {
 
 
       <div className="bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
-        <Login setUserName={setUserName} />
-        <Logout setUserName={setUserName} />
-        <ExistingSheets />
-        <p className="text-black">Spreadsheet name: {spreadsheetInfo.name}</p>
-        <NameBar />
+        {!userLoggedIn && <Login setUserName={setUserName} />}
+        {userLoggedIn && <Logout setUserName={setUserName} spreadsheetInfo={spreadsheetInfo} setSpreadsheetInfo={setSpreadsheetInfo} />}
+        {userLoggedIn && <NameBar />}
+        {userLoggedIn && <ExistingSheets />}
+        {userLoggedIn && spreadsheetInfo.name && (
+          <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+        )}
+        {userLoggedIn && spreadsheetInfo.name && (<DataFetch />)}
       </div>
 
 
