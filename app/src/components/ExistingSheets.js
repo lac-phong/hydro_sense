@@ -22,6 +22,7 @@ function ExistingSheets() {
             setSpreadsheetInfo({ ...spreadsheetInfo, name: data.docs.at(0).name, id: data.docs.at(0).id })
             console.log(data.docs.at(0).name)
             console.log(data.docs.at(0).id)
+            window.open("https://docs.google.com/spreadsheets/d/" + data.docs.at(0).id + "/edit", "_blank");
           }
         }
       })
