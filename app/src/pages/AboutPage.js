@@ -6,8 +6,19 @@ import Link from 'next/link'
 const AboutPage = () => {
  return (
    <nav  className="bg-blue-200">
-
+    <div className="bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
+       <h1 className="wavy text-base sm:text-3.5xl md:text-4xl lg:text-4.5xl font-bold text-center">ABOUT THE GARDEN</h1>
+     </div>
      <div className="flex flex-col lg:flex-row">
+     <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
+         <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold rounded-lg">VOLUNTEER HOURS</h1>
+         <u1>
+           <li className="ml-9"><span className="underline">Dates</span>: Augest 28 - December 8</li>
+           <li className="ml-9"><span className="underline">Times</span>: Tuesdays and Thursdays 8:30am-11am & Saturdays 9am-11am</li>
+           <li className="ml-9"><span className="underline">Garden Link</span>: <a href='https://linktr.ee/SJSUGarden'  target="_blank" rel="noopener noreferrer">https://linktr.ee/SJSUGarden.</a></li>
+           <li className="ml-9"><span className="underline">Open Hours</span>: August 28 - December 8; Mondays 8am - 2pm</li>
+         </u1>
+       </div>
        <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
        <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">WHO THEY ARE</h1>
          <u1 className="mb-4">
@@ -26,6 +37,15 @@ const AboutPage = () => {
        </u1>
       
      </div>
+
+     <div className="bg-gray-100 p-4 ml-5 mt-2 mr-5 rounded-lg">
+       <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">SUSTAINABILITY AT THE GARDEN</h1>
+       <u1>
+         <li className="ml-9">The community garden is chemical free (organic) which means that we do not use any pesticides or synthetic fertilizers. Furthermore, our garden is designed around the principles of permaculture and regenerative agriculture, meaning that we try to imitate the natural process. In the garden we have over sixty different plant species from perennial fruit trees and flowers to annual vegetable crops. Our garden ecosystem is diverse with multiple pollinators and creatures.</li>
+         <li className="ml-9">We have our own composting and gray water system that allows us to reuse and reduce our organic waste. Everything is incorporated into our garden again using sustainable methods.</li>
+       </u1>
+     </div>
+
 
 
      <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg">
@@ -109,6 +129,24 @@ const AboutPage = () => {
          </Link>
        </div>
      </div>
+
+
+     <div className="flex bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-center justify-center">
+       <Link href="/">
+         <button className="bn54 mr-5">
+           <span class="bn54span">Home</span>
+         </button>
+       </Link>
+
+
+       <Link href="/MeetTheTeam">
+       <button className="bn54 ml-5">
+           <span class="bn54span">MEET THE TEAM</span>
+         </button>
+       </Link>
+     </div>
+
+     
 
      <br />
      <br />
