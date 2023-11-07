@@ -10,10 +10,8 @@ import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
 const HomePage = () => {
-
-    const [userName, setUserName] = useState('');
-    const { spreadsheetInfo } = useContext(SpreadsheetContext)
-
+  const [userName, setUserName] = useState('');
+  const { spreadsheetInfo } = useContext(SpreadsheetContext);
   return (
     <div className="top">
       <div class="container">
@@ -54,7 +52,7 @@ const HomePage = () => {
               )}
               {userName && <NameBar />}
               {userName && <ExistingSheets />}
-              <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+              {spreadsheetInfo.name && (<p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>)}
               <DataFetch />
 
               <Link href='/AboutPage'>
