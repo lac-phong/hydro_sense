@@ -9,6 +9,9 @@ import DataFetch from '@/components/DataFetch';
 import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
+const pageStyle = {
+  background: '#8fb6ab'
+};
 
 const HomePage = () => {
 
@@ -17,7 +20,8 @@ const HomePage = () => {
   const userLoggedIn = !!userName;
 
   return (
-    <nav className="bg-blue-200">
+    <nav style={pageStyle}>
+      <br />
       <div className="flex bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
         <div className="w-1/10">
           <img
@@ -50,30 +54,31 @@ const HomePage = () => {
       <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 rounded-lg">
         <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">W E L C O M E</h1>
         {userLoggedIn && (
-                <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '>
-                  <span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>
-                    {userName}
-                  </span>
-                </h1>
+          <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '>
+            <span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>
+              {userName}
+            </span>
+          </h1>
         )}
       </div>
 
       <div className="flex flex-col lg:flex-row">
-        <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
-          <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg"></h1>
+        <div className="flex bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
+          <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">WHY WATER OPTIMIZATION MATTERS</h1>
           <u1> 
-            <li className="ml-9">The teams for this project consists of <span className="underline font-semibold">17 Fall '23 Potential New Members of the San Jose State University Theta Tau Professional Engineering Fraternity</span></li>
-            <li className="ml-9">The members were split into four teams, including the HARDWARE, MICROCONTROLLER, FRONTEND, and BACKEND teams</li>
+            <li className="ml-9">Water is a finite resource, and the need for responsible water usage is more important than ever.</li>
+            <li className="ml-9">By optimizing water usage in the SJSU Community Garden, we not only reduce water waste but also contribute to the preservation of our environment.</li>
+            <li className="ml-9">Efficient watering practices help sustain plant life, foster a healthier ecosystem, and support a thriving community garden.</li>
           </u1>
         </div>
 
-        <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
-        <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg"></h1>
+        <div className="flex bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
+        <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">BENEFITS OF THE HYDROSENSE PROJECT</h1>
           <u1 className="mb-4"> 
-            <li className="ml-9"><span className="underline font-semibold">Hardware Team</span>: Chris Wong, Justin Doan, Kevin Bautista, Janelle Bautista, Manan Upadhyay, Ethan Nyugen, Sid Nayak</li>
-            <li className="ml-9"><span className="underline font-semibold">Microcontroller Team</span>: James Kim, Michelle Kim, Drew Tom</li>
-            <li className="ml-9"><span className="underline font-semibold">Frontend Team</span>: David Song, Alan Wang, Krishiv Haranath</li>
-            <li className="ml-9"><span className="underline font-semibold">Backend Team</span>: Lac-Phong Nyugen, Stefan Le, Julia Husainzada, Akshitaa Balasai</li>
+            <li className="ml-9">Water Conservation: By optimizing watering practices, we reduce water wastage and promote responsible water usage.</li>
+            <li className="ml-9">Healthy Plants: Well-monitored moisture levels lead to healthier, more vibrant plant life.</li>
+            <li className="ml-9">Sustainability: The Hydro Sense Project aligns with SJSU's commitment to sustainability and environmental stewardship.</li>
+            <li className="ml-9">Community Engagement: We encourage SJSU students, faculty, and local residents to actively participate in this eco-friendly endeavor.</li>
           </u1>
         </div>
       </div>
@@ -125,6 +130,13 @@ const HomePage = () => {
         </Link>
       </div>
 
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
     </nav>
   )
