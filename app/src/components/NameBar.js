@@ -12,14 +12,20 @@ export default function NameBar() {
 
     return (
         <div>
-            <input
-                className='text-black'
-                type="search"
-                placeholder="Name spreadsheet"
-                onChange={handleChange}
-                value={nameInput}
-            />
-            <CreateButton name={nameInput}/>
+            <div className='flex my-4'>
+                <div className='w-1/2 mx-4 my-4'>
+                    <input
+                        className='text-black'
+                        type="search"
+                        placeholder="Name spreadsheet"
+                        onChange={handleChange}
+                        value={nameInput}
+                    />
+                </div>
+                <div className='w-1/2 mx-2 my-2'>
+                    <CreateButton name={nameInput}/>
+                </div>
+            </div>
         </div>
     )
 

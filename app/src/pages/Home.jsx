@@ -60,7 +60,7 @@ const HomePage = () => {
 
       <div className="flex flex-col lg:flex-row">
         <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
-        <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg"></h1>
+          <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg"></h1>
           <u1> 
             <li className="ml-9">The teams for this project consists of <span className="underline font-semibold">17 Fall '23 Potential New Members of the San Jose State University Theta Tau Professional Engineering Fraternity</span></li>
             <li className="ml-9">The members were split into four teams, including the HARDWARE, MICROCONTROLLER, FRONTEND, and BACKEND teams</li>
@@ -79,13 +79,13 @@ const HomePage = () => {
       </div>
 
 
-      <div className="bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
+      <div className="bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg flex flex-col items-center justify-center">
         {!userLoggedIn && <Login setUserName={setUserName} />}
         {userLoggedIn && <Logout setUserName={setUserName} spreadsheetInfo={spreadsheetInfo} setSpreadsheetInfo={setSpreadsheetInfo} />}
         {userLoggedIn && <NameBar />}
         {userLoggedIn && <ExistingSheets />}
         {userLoggedIn && spreadsheetInfo.name && (
-          <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+          <p className='text-black my-4'>SELECTED SPREADSHEET: {spreadsheetInfo.name}</p>
         )}
         {userLoggedIn && spreadsheetInfo.name && (<DataFetch />)}
       </div>

@@ -89,6 +89,8 @@ export default function CreateButton({ name }) {
         });
     }  
     return(
-      <button className='custom-button' onClick={() => createFile()}>CREATE NEW SPREADSHEET</button>
+      <button className='bn54' onClick={() => createFile()}>
+        <span class="bn54span">CREATE NEW SPREADSHEET</span>
+      </button>
   );
 }
