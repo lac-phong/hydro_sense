@@ -11,7 +11,9 @@ import Link from 'next/link';
 
 const HomePage = () => {
   const [userName, setUserName] = useState('');
-  const { spreadsheetInfo } = useContext(SpreadsheetContext);
+  const { spreadsheetInfo, setSpreadsheetInfo } = useContext(SpreadsheetContext);
+  const userLoggedIn = !!userName; // Check if the user is logged in
+
   return (
     <div className="top">
       <div class="container">
@@ -38,23 +40,21 @@ const HomePage = () => {
               <h1 className="wp_text_container text-black mb-4 text-6xl font-bold">
                 WELCOME
               </h1>
-              {userName ? (
-                <div>
-                  <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '>
-                    <span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>
-                      {userName}
-                    </span>
-                  </h1>
-                  <Logout setUserName={setUserName} />
-                </div>
-              ) : (
-                <Login setUserName={setUserName} />
+              {userLoggedIn && (
+                <h1 className='name_text_container text-[#96BD7A] mb-4 text-6xl font-bold '>
+                  <span className='gradient-text bg-clip-text bg-gradient-to-r from-green-600 to-green-300'>
+                    {userName}
+                  </span>
+                </h1>
               )}
-              {userName && <NameBar />}
-              {userName && <ExistingSheets />}
-              {spreadsheetInfo.name && (<p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>)}
-              <DataFetch />
-
+              {!userLoggedIn && <Login setUserName={setUserName} />}
+              {userLoggedIn && <Logout setUserName={setUserName} spreadsheetInfo={spreadsheetInfo} setSpreadsheetInfo={setSpreadsheetInfo} />}
+              {userLoggedIn && <NameBar />}
+              {userLoggedIn && <ExistingSheets />}
+              {userLoggedIn && spreadsheetInfo.name && (
+                <p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>
+              )}
+              {userLoggedIn && spreadsheetInfo.name && (<DataFetch />)}
               <Link href='/AboutPage'>
                 <button className='custom-additional-button'>
                   <span className='about-text'> ABOUT </span>
@@ -64,13 +64,13 @@ const HomePage = () => {
               <Link href='/MeetTheTeam'>
                 <button className='custom-additional-button'>ABOUT TEAM</button>
               </Link>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
