@@ -13,7 +13,8 @@ import Link from 'next/link';
 const HomePage = () => {
 
   const [userName, setUserName] = useState('');
-  const { spreadsheetInfo } = useContext(SpreadsheetContext)
+  const { spreadsheetInfo, setSpreadsheetInfo } = useContext(SpreadsheetContext)
+  const userLoggedIn = !!userName;
 
   return (
     <nav className="bg-blue-200">

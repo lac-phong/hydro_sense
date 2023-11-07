@@ -19,7 +19,7 @@ export default function DataFetch() {
 
   const CLIENT_ID = "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
   const API_KEY = "AIzaSyCScwxcDw0WuEaaG2gYW5oho8UXQazOnRY";
-  const SCOPES = "https://www.googleapis.com/auth/drive";
+  const SCOPES = "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/spreadsheets";
 
   useEffect(() => {
       async function loadGapiScript() {
@@ -101,6 +101,7 @@ export default function DataFetch() {
       })
     })
     .then((res) => {
+      console.log(res)
       if (!res.ok) {
         throw new Error('Network response was not ok');
       }
