@@ -28,7 +28,7 @@ const MeetTheTeam = () => {
         <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
         <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">THE TEAMS</h1>
           <u1> 
-            <li className="ml-9">The teams for this project consists of <span className="underline font-semibold">17 Fall '23 Potential New Members of the San Jose State University Theta Tau Professional Engineering Fraternity</span></li>
+            <li className="ml-9">The teams for this project consists of <span className="underline font-semibold">17 Fall &apos;23 Potential New Members of the San Jose State University Theta Tau Professional Engineering Fraternity</span></li>
             <li className="ml-9">The members were split into four teams, including the HARDWARE, MICROCONTROLLER, FRONTEND, and BACKEND teams</li>
           </u1>
         </div>
@@ -47,7 +47,7 @@ const MeetTheTeam = () => {
       <div className="flex bg-gray-100 p-4 ml-5 mt-2 mr-5 mb-5 rounded-lg items-center justify-center">
         <div className="w-1/2 flex flex-col items-center">
           <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">
-            IOTA CLASS FA'23
+            IOTA CLASS FA&apos;23
           </h1>
             <Carousel showStatus={false} showThumbs={false} infiniteLoop autoPlay interval={5000}>
             <div>
