@@ -133,7 +133,6 @@ export default function DataFetch() {
       filteredData = testData.filter(item => item.date >= selectedDateStr && item.time >= selectedTimeStr);
       console.log(selectedDateStr)
       console.log(selectedTimeStr)
-      console.log(testData)
     }
     var values = filteredData.map(data => [data.date, data.time, data.temperature, data.humidity]);
   

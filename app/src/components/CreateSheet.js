@@ -69,7 +69,6 @@ export default function CreateButton({ name }) {
 
     function createFile() {
         var accessToken = gapi.auth.getToken().access_token;
-        console.log(accessToken)
         fetch('https://sheets.googleapis.com/v4/spreadsheets', {
         method: "POST",
         headers: new Headers({
