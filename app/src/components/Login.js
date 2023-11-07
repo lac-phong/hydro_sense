@@ -38,6 +38,7 @@ export default function Login({ setUserName }) {
   return (
     <div id="signInButton">
       <GoogleLogin
+        className="bn54"
         clientId={CLIENT_ID}
         buttonText="Login"
         onSuccess={onSuccess}

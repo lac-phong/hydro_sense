@@ -15,6 +15,7 @@ function Logout({ setUserName, setSpreadsheetInfo, spreadsheetInfo }) {
 
   return (
     <GoogleLogout
+      className="bn54"
       clientId={CLIENT_ID}
       buttonText={"Logout"}
       onLogoutSuccess={onSuccess}

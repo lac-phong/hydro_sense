@@ -28,9 +28,9 @@ function ExistingSheets() {
     }
 
     return (
-  
-        <button className='custom-button'><span className='about-text' onClick={() => handleOpenPicker()}>EDIT EXISTING SHEET</span></button>
-    
+      <button className='bn54' onClick={() => handleOpenPicker()}>
+        <span class="bn54span">EDIT EXISTING SHEET</span>
+      </button> 
   )
 }
 

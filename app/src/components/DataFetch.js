@@ -171,11 +171,23 @@ export default function DataFetch() {
 
   return (
     <div>
-      <button className='custom-button' onClick={updateSpreadsheet}>UPDATE SPREADSHEET</button>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DatePicker label="Select data from date" value={selectedDate} onChange={(newDate) => setSelectedDate(newDate)}/>
-        <TimePicker label="Select data from time" value={selectedTime} onChange={(newTime) => setSelectedTime(newTime)}/>
-      </LocalizationProvider>
+      <div className="flex flex-col items-center">
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <div className="items-center justify-center mb-5">
+            <button className='bn54' onClick={updateSpreadsheet}>
+              <span class="bn54span">UPDATE SPREADSHEET</span>
+            </button>
+          </div>
+          <div className="flex w-full justify-center">
+            <div className="w-1/2 mx-5">
+              <DatePicker label="Select from date" value={selectedDate} onChange={(newDate) => setSelectedDate(newDate)}/>
+            </div>
+            <div className="w-1/2 mx-5">
+              <TimePicker label="Select from time" value={selectedTime} onChange={(newTime) => setSelectedTime(newTime)}/>
+            </div>
+          </div>
+        </LocalizationProvider>
+      </div>
     </div>
   );
 }
