@@ -19,24 +19,32 @@ export default function DataFetch() {
 
   const CLIENT_ID = "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
   const API_KEY = "AIzaSyCScwxcDw0WuEaaG2gYW5oho8UXQazOnRY";
-  const SCOPES = "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/spreadsheets";
+  const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
   useEffect(() => {
-      async function loadGapiScript() {
-        const gapi = await import('gapi-script').then((pack) => pack.gapi);
-        gapi.load('client:auth2', start);
-      }
+    async function loadGapiScript() {
+      const gapi = await import('gapi-script').then((pack) => pack.gapi);
+      gapi.load('client:auth2', start);
+    }
   
-      function start() {
-        gapi.client.init({
+    function start() {
+      const authInstance = gapi.auth2.getAuthInstance();
+      console.log('authInstance:', authInstance);
+      if (!authInstance) {
+        gapi.auth2.init({
           apiKey: API_KEY,
           clientId: CLIENT_ID,
           scope: SCOPES
+        }).catch((error) => {
+          console.error('Error initializing gapi client:', error);
         });
       }
+    }
   
-      loadGapiScript();
-    }, [API_KEY, CLIENT_ID, SCOPES]);
+    loadGapiScript();
+  }, [API_KEY, CLIENT_ID, SCOPES]);
+  
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -72,6 +80,7 @@ export default function DataFetch() {
   }, []);
 
   function updateSpreadsheet() {
+
     var accessToken = gapi.auth.getToken().access_token;
 
     var labels = ['Date', 'Time', 'Temperature', 'Humidity'];
@@ -103,7 +112,7 @@ export default function DataFetch() {
     .then((res) => {
       console.log(res)
       if (!res.ok) {
-        throw new Error('Network response was not ok');
+        return res.text().then(text => { throw new Error(`Error: ${res.status}, ${text}`); });
       }
       return res.json();
     })

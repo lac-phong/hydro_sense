@@ -14,15 +14,21 @@ export default function CreateButton({ name }) {
         const gapi = await import('gapi-script').then((pack) => pack.gapi);
         gapi.load('client:auth2', start);
       }
-  
+    
       function start() {
-        gapi.client.init({
-          apiKey: API_KEY,
-          clientId: CLIENT_ID,
-          scope: SCOPES
-        });
+        const authInstance = gapi.auth2.getAuthInstance();
+        console.log('authInstance:', authInstance);
+        if (!authInstance) {
+          gapi.auth2.init({
+            apiKey: API_KEY,
+            clientId: CLIENT_ID,
+            scope: SCOPES
+          }).catch((error) => {
+            console.error('Error initializing gapi client:', error);
+          });
+        }
       }
-  
+    
       loadGapiScript();
     }, [API_KEY, CLIENT_ID, SCOPES]);
 
