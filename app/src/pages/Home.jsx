@@ -50,10 +50,11 @@ const HomePage = () => {
               ) : (
                 <Login setUserName={setUserName} />
               )}
-              <NameBar />
-              <ExistingSheets />
+              {userName && <NameBar />}
+              {userName && <ExistingSheets />}
               {spreadsheetInfo.name && (<p className='text-black'>Spreadsheet name: {spreadsheetInfo.name}</p>)}
               <DataFetch />
+
               <Link href='/AboutPage'>
                 <button className='custom-additional-button'>
                   <span className='about-text'> ABOUT </span>

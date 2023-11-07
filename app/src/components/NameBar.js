@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CreateButton from './createSheet';
+import CreateButton from './CreateSheet';
 
 export default function NameBar() {
 

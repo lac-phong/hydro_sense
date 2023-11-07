@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react'
 import { SpreadsheetContext } from './SpreadsheetContext';
 
-export default function CreateButton({ name }) {
 
+export default function CreateButton({ name }) {
     const { spreadsheetInfo, setSpreadsheetInfo } = useContext(SpreadsheetContext)
 
     const CLIENT_ID = "274329865046-8bmr8o2mtil4qr13ttj0gc8ln6v6u5va.apps.googleusercontent.com";
@@ -47,6 +47,6 @@ export default function CreateButton({ name }) {
         });
     }  
     return(
-        <button className='custom-button' onClick={() => createFile()}>CREATE NEW SPREADSHEET</button>
-    );
+      <button className='custom-button' onClick={() => createFile()}>CREATE NEW SPREADSHEET</button>
+  );
 }
