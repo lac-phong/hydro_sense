@@ -87,7 +87,7 @@ const MeetTheTeam = () => {
           <h2 className="ml-4"> I N S T A G R A M</h2>
           <Link href="https://www.instagram.com/pnmf23/" target="_blank" rel="noopener noreferrer">
             <button className="ml-3 hover:bg-gray-300 p-2 rounded-lg transition duration-300">
-              <Image src="/instagram_icon.png" width={50} height={50} alt="Pic1" className="rounded-full hover:animate-bounce"/>
+              <Image src="/Instagram_icon.png" width={50} height={50} alt="Pic1" className="rounded-full hover:animate-bounce"/>
             </button>
           </Link>
         </div>
