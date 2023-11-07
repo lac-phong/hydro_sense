@@ -14,10 +14,45 @@ export default function CreateButton({ name }) {
         const gapi = await import('gapi-script').then((pack) => pack.gapi);
         gapi.load('client:auth2', start);
       }
+
+      async function refreshToken() {
+        const authInstance = gapi.auth2.getAuthInstance();
+        let REFRESH_TOKEN
+        authInstance.grantOfflineAccess()
+          .then((res) => {
+            console.log(res);
+            // Save the refresh token
+            this.data.refreshToken = res.code;
+            REFRESH_TOKEN = res.code;
+          });
+        const response = await fetch('https://oauth2.googleapis.com/token', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: new URLSearchParams({
+            'refresh_token': REFRESH_TOKEN,
+            'client_id': CLIENT_ID,
+            'grant_type': 'refresh_token'
+          })
+        });
+       
+        const data = await response.json();
+       
+        // Update the token
+        gapi.auth.setToken({
+          access_token: data.access_token,
+          expires_at: Date.now() + data.expires_in * 1000
+        });
+      }
     
       function start() {
         const authInstance = gapi.auth2.getAuthInstance();
-        console.log('authInstance:', authInstance);
+        // Check if the token is expired
+        if (gapi.auth.getToken().expires_at < Date.now()) {
+          // If the token is expired, refresh it
+          refreshToken();
+        }
         if (!authInstance) {
           gapi.auth2.init({
             apiKey: API_KEY,
@@ -34,6 +69,7 @@ export default function CreateButton({ name }) {
 
     function createFile() {
         var accessToken = gapi.auth.getToken().access_token;
+        console.log(accessToken)
         fetch('https://sheets.googleapis.com/v4/spreadsheets', {
         method: "POST",
         headers: new Headers({

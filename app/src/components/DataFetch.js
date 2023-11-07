@@ -26,10 +26,45 @@ export default function DataFetch() {
       const gapi = await import('gapi-script').then((pack) => pack.gapi);
       gapi.load('client:auth2', start);
     }
+
+    async function refreshToken() {
+      const authInstance = gapi.auth2.getAuthInstance();
+      let REFRESH_TOKEN
+      authInstance.grantOfflineAccess()
+        .then((res) => {
+          console.log(res);
+          // Save the refresh token
+          this.data.refreshToken = res.code;
+          REFRESH_TOKEN = res.code;
+        });
+      const response = await fetch('https://oauth2.googleapis.com/token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          'refresh_token': REFRESH_TOKEN,
+          'client_id': CLIENT_ID,
+          'grant_type': 'refresh_token'
+        })
+      });
+     
+      const data = await response.json();
+     
+      // Update the token
+      gapi.auth.setToken({
+        access_token: data.access_token,
+        expires_at: Date.now() + data.expires_in * 1000
+      });
+    }
   
     function start() {
       const authInstance = gapi.auth2.getAuthInstance();
-      console.log('authInstance:', authInstance);
+      // Check if the token is expired
+      if (gapi.auth.getToken().expires_at < Date.now()) {
+        // If the token is expired, refresh it
+        refreshToken();
+      }
       if (!authInstance) {
         gapi.auth2.init({
           apiKey: API_KEY,
@@ -87,12 +122,19 @@ export default function DataFetch() {
 
     const selectedDateStr = dayjs(selectedDate).format('YYYY-MM-DD');
     const selectedTimeStr = dayjs(selectedTime, 'HH:mm:ss').format('HH:mm:ss');
+
+    console.log("Selected date " + selectedDate)
+    console.log("Selected time " + selectedTime)
+
+    let filteredData = testData
   
     // Transform test_data into the required format
-    const filteredData = testData.filter(item => item.date >= selectedDateStr && item.time >= selectedTimeStr);
-    console.log(selectedDateStr)
-    console.log(selectedTimeStr)
-    console.log(testData)
+    if ((selectedDate != null) && (selectedTime != null)) {
+      filteredData = testData.filter(item => item.date >= selectedDateStr && item.time >= selectedTimeStr);
+      console.log(selectedDateStr)
+      console.log(selectedTimeStr)
+      console.log(testData)
+    }
     var values = filteredData.map(data => [data.date, data.time, data.temperature, data.humidity]);
   
     values.unshift(labels)
