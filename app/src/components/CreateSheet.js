@@ -65,7 +65,7 @@ export default function CreateButton({ name }) {
       }
     
       loadGapiScript();
-    }, [API_KEY, CLIENT_ID, SCOPES]);
+    }, []);
 
     function createFile() {
         var accessToken = gapi.auth.getToken().access_token;
