@@ -105,6 +105,12 @@ const MeetTheTeam = () => {
             <span class="bn54span">About Garden</span>
           </button>
         </Link>
+
+        <Link href="/Privacy">
+        <button className="bn54 ml-10">
+            <span class="bn54span">Privacy Policy</span>
+          </button>
+        </Link>
       </div>
 
       <br />

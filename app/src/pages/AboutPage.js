@@ -118,11 +118,16 @@ const AboutPage = () => {
          </button>
        </Link>
 
-
        <Link href="/MeetTheTeam">
-       <button className="bn54 ml-5">
-           <span class="bn54span">MEET THE TEAM</span>
+         <button className="bn54 ml-5">
+           <span class="bn54span">Meet The Team</span>
          </button>
+       </Link>
+
+       <Link href="/Privacy">
+        <button className="bn54 ml-10">
+            <span class="bn54span">Privacy Policy</span>
+          </button>
        </Link>
      </div>
 

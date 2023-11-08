@@ -128,6 +128,12 @@ const HomePage = () => {
             <span class="bn54span">Meet The Team</span>
           </button>
         </Link>
+
+        <Link href="/Privacy">
+        <button className="bn54 ml-10">
+            <span class="bn54span">Privacy Policy</span>
+          </button>
+        </Link>
       </div>
 
       <br />
