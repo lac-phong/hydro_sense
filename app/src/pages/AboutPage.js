@@ -30,6 +30,7 @@ const AboutPage = () => {
            <li className="ml-9"><span className="underline">Open Hours</span>: August 28 - December 8; Mondays 8am - 2pm</li>
          </u1>
        </div>
+
        <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
        <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">WHO THEY ARE</h1>
          <u1 className="mb-4">
@@ -39,14 +40,12 @@ const AboutPage = () => {
        </div>
      </div>
 
-
      <div className="bg-gray-100 p-4 ml-5 mt-2 mr-5 mb-5 rounded-lg">
        <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">PURPOSE</h1>
        <u1>
          <li className="ml-9">The object of the Hydro Sense Project was to help out <span className="underline font-semibold">SJSU Community Garden</span> to <span className="underline font-semibold">optimize</span> its water usage</li>
          <li className="ml-9">We wanted to achieve this by automating the process of recording the moisture and temperature data throughout the day for the garden to develop better watering practices and systems</li>
        </u1>
-      
      </div>
 
      <div className="bg-gray-100 p-4 ml-5 mt-2 mr-5 rounded-lg">
@@ -57,8 +56,6 @@ const AboutPage = () => {
        </u1>
      </div>
 
-
-
      <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg">
        <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">THEIR CONTACT INFORMATION</h1>
        <u1>
@@ -67,7 +64,6 @@ const AboutPage = () => {
          <li className="ml-9">Please contact Matthew at the soonest for any sign language interpreter or other accommodation requests.</li>
        </u1>
      </div>
-
 
      <div className="flex bg-gray-100 p-4 ml-5 mt-2 mr-5 mb-5 rounded-lg items-center justify-center">
        <div className="w-5/6 flex flex-col items-center overflow-x-auto">
@@ -110,7 +106,6 @@ const AboutPage = () => {
        </div>
      </div>
 
-
      <div className="flex bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-center justify-center">
        <Link href="/">
          <button className="bn54 mr-5">
@@ -130,8 +125,6 @@ const AboutPage = () => {
           </button>
        </Link>
      </div>
-
-     
 
      <br />
      <br />
