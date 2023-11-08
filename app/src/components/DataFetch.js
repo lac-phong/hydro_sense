@@ -77,7 +77,7 @@ export default function DataFetch() {
     }
   
     loadGapiScript();
-  }, [API_KEY, CLIENT_ID, SCOPES]);
+  }, []);
   
   
 
@@ -121,18 +121,15 @@ export default function DataFetch() {
     var labels = ['Date', 'Time', 'Temperature', 'Humidity'];
 
     const selectedDateStr = dayjs(selectedDate).format('YYYY-MM-DD');
-    const selectedTimeStr = dayjs(selectedTime, 'HH:mm:ss').format('HH:mm:ss');
 
     console.log("Selected date " + selectedDate)
-    console.log("Selected time " + selectedTime)
 
     let filteredData = testData
   
     // Transform test_data into the required format
-    if ((selectedDate != null) && (selectedTime != null)) {
-      filteredData = testData.filter(item => item.date >= selectedDateStr && item.time >= selectedTimeStr);
+    if ((selectedDate != null)) {
+      filteredData = testData.filter(item => item.date >= selectedDateStr);
       console.log(selectedDateStr)
-      console.log(selectedTimeStr)
     }
     var values = filteredData.map(data => [data.date, data.time, data.temperature, data.humidity]);
   
@@ -178,12 +175,7 @@ export default function DataFetch() {
             </button>
           </div>
           <div className="flex w-full justify-center">
-            <div className="w-1/2 mx-5">
               <DatePicker label="Select from date" value={selectedDate} onChange={(newDate) => setSelectedDate(newDate)}/>
-            </div>
-            <div className="w-1/2 mx-5">
-              <TimePicker label="Select from time" value={selectedTime} onChange={(newTime) => setSelectedTime(newTime)}/>
-            </div>
           </div>
         </LocalizationProvider>
       </div>

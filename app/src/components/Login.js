@@ -23,7 +23,7 @@ export default function Login({ setUserName }) {
     }
   
     loadGapiScript();
-  }, [API_KEY, CLIENT_ID, SCOPES]);
+  }, []);
   
 
   const onSuccess = (res) => {
