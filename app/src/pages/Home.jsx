@@ -21,7 +21,7 @@ const HomePage = () => {
       <div className="flex bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
         <div className="w-1/10">
           <img
-            src="/hs_logo.png"
+            src="/logo.png"
             alt="Hydro Sense Logo"
             className="w-10 h-15"
           />
@@ -121,6 +121,12 @@ const HomePage = () => {
         <Link href="/MeetTheTeam">
           <button className="bn54 ml-5">
             <span class="bn54span">Meet The Team</span>
+          </button>
+        </Link>
+
+        <Link href="/Privacy">
+        <button className="bn54 ml-5">
+            <span class="bn54span">Privacy Policy</span>
           </button>
         </Link>
       </div>

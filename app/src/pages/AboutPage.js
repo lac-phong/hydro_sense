@@ -144,6 +144,12 @@ const AboutPage = () => {
            <span class="bn54span">MEET THE TEAM</span>
          </button>
        </Link>
+
+       <Link href="/Privacy">
+        <button className="bn54 ml-5">
+            <span class="bn54span">Privacy Policy</span>
+          </button>
+        </Link>
      </div>
 
      
