@@ -9,17 +9,17 @@ import DataFetch from '@/components/DataFetch';
 import { SpreadsheetContext } from '../components/SpreadsheetContext';
 import Link from 'next/link';
 
-const pageStyle = {
+const pageStyle = { // background color
   background: '#8fb6ab'
 };
 
 const HomePage = () => {
 
-  const [userName, setUserName] = useState('');
-  const { spreadsheetInfo, setSpreadsheetInfo } = useContext(SpreadsheetContext)
+  const [userName, setUserName] = useState(''); // User information variable
+  const { spreadsheetInfo, setSpreadsheetInfo } = useContext(SpreadsheetContext) // Spreadsheet information variable
   const userLoggedIn = !!userName;
 
-  return (
+  return ( // Displays the text elements and user information on the Home page.
     <nav style={pageStyle}>
       <br />
       <div className="flex bg-gray-100 p-4 ml-5 mt-8 mr-5 rounded-lg">
