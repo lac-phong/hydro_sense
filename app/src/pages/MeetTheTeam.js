@@ -19,7 +19,7 @@ const MeetTheTeam = () => {
       <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 rounded-lg">
         <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">ABOUT THE PROJECT</h1>
         <u1>
-          <li className="ml-9">The object of the Hydro Sense Project was to help out <span className="underline font-semibold">SJSU Community Garden</span> to <span className="underline font-semibold">optimize</span> its water usage</li>
+          <li className="ml-9">The objective of the Hydro Sense Project was to help out <span className="underline font-semibold">SJSU Community Garden</span> to <span className="underline font-semibold">optimize</span> its water usage</li>
           <li className="ml-9">We wanted to achieve this by automating the process of recording the moisture and temperature data throughout the day for the garden to develop better watering practices and systems</li>
         </u1>
       </div>
@@ -36,10 +36,10 @@ const MeetTheTeam = () => {
         <div className="bg-gray-100 p-4 ml-5 mt-5 mr-5 mb-5 rounded-lg items-stretch">
         <h1 className="flex bg-gray-200 p-2 inline-block text-base md:text-2xl lg:text-3xl font-bold mb-2 rounded-lg">TEAM MEMBERS</h1>
           <u1 className="mb-4"> 
-            <li className="ml-9"><span className="underline font-semibold">Hardware Team</span>: Chris Wong, Justin Doan, Kevin Bautista, Janelle Bautista, Manan Upadhyay, Ethan Nyugen, Sid Nayak</li>
+            <li className="ml-9"><span className="underline font-semibold">Hardware Team</span>: Chris Wong, Justin Doan, Kevin Bautista, Janelle Bautista, Manan Upadhyay, Ethan Nguyen, Sid Nayak</li>
             <li className="ml-9"><span className="underline font-semibold">Microcontroller Team</span>: James Kim, Michelle Kim, Drew Tom</li>
             <li className="ml-9"><span className="underline font-semibold">Frontend Team</span>: David Song, Alan Wang, Krishiv Haranath</li>
-            <li className="ml-9"><span className="underline font-semibold">Backend Team</span>: Lac-Phong Nyugen, Stefan Le, Julia Husainzada, Akshitaa Balasai</li>
+            <li className="ml-9"><span className="underline font-semibold">Backend Team</span>: Lac-Phong Nguyen, Stefan Le, Julia Husainzada, Akshitaa Balasai</li>
           </u1>
         </div>
       </div>
